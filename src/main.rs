@@ -27,6 +27,8 @@ fn to_continue() -> bool {
     let mut play_again = String::new();
     let mut result = false;
     loop {
+        let mut play_again = String::new();
+
         println!("Would you like to play again? (y/n)");
 
         io::stdin().read_line(&mut play_again)
@@ -46,7 +48,7 @@ fn to_continue() -> bool {
                 break;
             },
             _ => {
-                println!("Invalid Input!");
+                println!("{}, is not a valid input!", play_again);
                 continue;
             }
         }   
